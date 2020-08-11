@@ -1,10 +1,8 @@
-# [vue-code-diff](https://www.npmjs.com/package/vue-code-diff)
-
-> 代码比对展示 [demo](http://diff.xjie.me/)
+# [vue-code-diff](https://github.com/lyyzhh/vue-code-diff)
 
 ## 安装
 ```shell
-yarn add vue-code-diff
+npm install @lyyzhh/vuecodediff
 ```
 
 ## 使用
