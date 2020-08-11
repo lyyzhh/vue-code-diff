@@ -69,8 +69,8 @@ export default {
         return html.replace(/<span class="d2h-code-line-ctn">(.+?)<\/span>/g, '<span class="d2h-code-line-ctn"><code>$1</code></span>')
       }
       if (isShowNoChange) {
-        oldString = 'File Without Change\tOldString: ======================== \n' + oldString
-        newString = 'File Without Change\tNewString: ======================== \n' + newString
+        oldString = '========================OldString======================== \n' + oldString
+        newString = '========================NewString======================== \n' + newString
       }
       let args = [fileName, oldString, newString, '', '', {context: context}]
       let dd = createPatch(...args)

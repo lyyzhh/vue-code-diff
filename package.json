@@ -1,8 +1,8 @@
 {
   "name": "@lyyzhh/vuecodediff",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "代码比对展示(Code comparison display)",
-  "author": "",
+  "author": "lyy",
   "private": false,
   "main": "/dist/vue-code-diff.js",
   "keywords": [
