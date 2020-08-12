@@ -102,4 +102,14 @@ export default {
 .d2h-file-header{
   display: none
 }
+/* codeDiff样式调整 */
+.diff-tbody tr, .d2h-diff-tbody td {
+    display: block !important;
+}
+.d2h-file-side-diff {
+    display: inline-grid !important;
+}
+.d2h-code-line-prefix, .d2h-code-linenumber, .d2h-code-side-linenumber, .d2h-emptyplaceholder{
+  height: 24px !important;
+}
 </style>
