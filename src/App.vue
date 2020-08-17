@@ -75,7 +75,7 @@
         oldStr: '',
         newStr: '',
         fotmat: false,
-        context: 10,
+        context: 10000,
         diffStyle: 'word',
         fileName: '',
         isShowNoChange: true,

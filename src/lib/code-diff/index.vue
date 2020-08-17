@@ -69,8 +69,9 @@ export default {
         return html.replace(/<span class="d2h-code-line-ctn">(.+?)<\/span>/g, '<span class="d2h-code-line-ctn"><code>$1</code></span>')
       }
       if (isShowNoChange) {
-        oldString = '========================OldString======================== \n' + oldString
-        newString = '========================NewString======================== \n' + newString
+        // 因为diff2html再没有差异时不会显示源码，这里做个fix，配合css样式，隐藏多出的本行
+        oldString = oldString + '\n========================OldString========================'
+        newString = newString + '\n========================newString========================'
       }
       let args = [fileName, oldString, newString, '', '', {context: context}]
       let dd = createPatch(...args)
@@ -111,5 +112,9 @@ export default {
 }
 .d2h-code-line-prefix, .d2h-code-linenumber, .d2h-code-side-linenumber, .d2h-emptyplaceholder{
   height: 24px !important;
+}
+/* 隐藏最后一行的手动差异fix */
+.d2h-file-side-diff .d2h-diff-tbody tr:last-child,.d2h-file-side-diff .d2h-diff-tbody tr:first-child{
+  display: none;
 }
 </style>
